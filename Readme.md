@@ -1,5 +1,12 @@
 # About StartUp Mapper
 
+NEW** 
+	1) New Project structure which adheres more to the ionic framework structure and documentation.
+	2) Unused libraries removed
+	3) New functionality added which adds pop up info windows on each marker. User can also add images and links into these.
+	4) New functionality on the way which will add checkbox functionality so the user can choose what goes into the info windows.
+	5) New styling will also be added soon...
+
 Node plugins used:
 
 	1) Gulp -- Automates painful or time-consuming tasks in the development workflow. In this instance its doing css pre-processing, minification of css, js files and live reload. gulpfile.js in here is a pre-built file i have used elsewhere and edited were it was needed.
