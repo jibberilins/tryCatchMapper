@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/mainDirective.js"></script>
+   
+    
+  </head>
+  <body ng-app="starter" ng-controller="startupController">
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">StartUp Mapper</h1>
+      </ion-header-bar>
+      <ion-content>
+
+      <map on-create="mapCreated(map)"></map>
+      <textarea class="user-data-area" name="startUpField" ng-model="startUpData" id="userDataArea" cols="30" rows="10" type="text" placeholder="Map Data" ng-change="watchMapData()"></textarea>
+
+        <div id="startUpTable" class="row" ng-repeat="i in startUpList">
+          <div id="SrtUpComp" class="col">{{i.company}}</div>
+          <div id="SrtUpFound" class="col">{{i.founder}}</div>
+          <div id="SrtUpCity" class="col">{{i.city}}</div>
+          <div id="SrtUpCo" class="col">{{i.country}}</div>
+          <div id="SrtUpPostalCo" class="col">{{i.postalco}}</div>
+          <div id="SrtUpStreet" class="col">{{i.street}}</div>
+          <div id="SrtUpPhoto" class="col">{{i.photo}}</div>
+          <div id="SrtUpHome" class="col">{{i.homepage}}</div>
+          <div id="SrtUpLat" class="col">{{i.latitude}}</div>
+          <div id="SrtUpLong" class="col">{{i.longitude}}</div>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
